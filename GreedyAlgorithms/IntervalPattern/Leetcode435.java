@@ -1,4 +1,4 @@
-package GreedyAlgorithms;
+package GreedyAlgorithms.IntervalPattern;
 
 import java.util.Arrays;
 

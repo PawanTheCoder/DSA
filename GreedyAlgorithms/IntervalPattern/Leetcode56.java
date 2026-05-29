@@ -1,10 +1,9 @@
-package GreedyAlgorithms;
+package GreedyAlgorithms.IntervalPattern;
 
 import java.util.Arrays;
 
 public class Leetcode56 {
     public static void main(String[] args) {
-        
         int[][] intervals = {{1 , 4} , {2 , 3}};
         int[][] ans = merge(intervals);
         for(int i =0 ; i < ans.length ; i++) {
