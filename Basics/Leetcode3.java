@@ -1,7 +1,6 @@
 package Basics;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 
 public class Leetcode3 {
     public static void main(String[] args) {
