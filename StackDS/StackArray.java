@@ -1,4 +1,4 @@
-package Stack;
+package StackDS;
 
 public class StackArray {
     private int capacity;
