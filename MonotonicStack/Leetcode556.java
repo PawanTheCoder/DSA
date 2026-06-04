@@ -1,56 +1,59 @@
 package MonotonicStack;
 
-import java.util.*;
-
 public class Leetcode556 {
-    public static void main(String[] args) {
-        int num = 21;
-        int ans = nextGreaterElement(num);
-        System.out.println(ans);
-    }
-    public static int nextGreaterElement(int n) {
-        if(n > Integer.MAX_VALUE) {
+  public static void main(String[] args) {
+    int a = 12443322;
+    int ans = nextGreaterElement(a);
+    System.out.println(ans);
+  }
+
+   public static int nextGreaterElement(int n) {
+        char[] arr = String.valueOf(n).toCharArray();
+        System.out.print("Input Number : ");
+        for(char c : arr) {
+            System.out.print(c + " ");
+        }
+
+        // Step 1 : Find pivot
+        int i = arr.length -2;
+        while(i >=0 && arr[i] >= arr[i+1]) {
+            i--;
+        }
+
+
+        // No next permutation exists
+        if(i < 0) {
             return -1;
         }
-        StringBuilder str = new StringBuilder();
-        ArrayList<Integer> arr = new ArrayList<>();
 
-        int num = n;
-        while(num != 0) {
-            arr.add(num % 10);
-            num /= 10;
-        }
-        Collections.reverse(arr);
-List<Integer> newArr = new ArrayList<>(arr);
+        // Step 2 : Find just larger element
+        int j = arr.length -1;
 
-        
-
-        int size = newArr.size();
-        boolean isValid = false;
-        for(int i = size -1 ; i >= 0 ; i--) {
-            for(int j = i - 1; j >=0; j--) {
-                if(newArr.get(j) <newArr.get(i)) {
-                    int temp = newArr.get(i);
-                    newArr.set(i , arr.get(j));
-                    newArr.set(j , temp);
-                    isValid = true;
-                    break;
-                }
-            }
-            if(isValid == true) {
-                break;
-            }
-        }
-        for(int i = 0;i < newArr.size() ; i++) {
-            str.append(newArr.get(i));
-        }
-        
-        String newStr = str.toString();
-        int newNum = Integer.parseInt(newStr);
-        if(newNum != n) {
-            return newNum;
+        while(arr[j] <= arr[i]) {
+            j--;
         }
 
-        return -1;
+        // Swap we got i and j both now swap
+        char temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+
+        // Step 3: Reverse suffix
+        reverse(arr, i + 1, arr.length - 1);
+
+        // Convert back to number
+        long ans = Long.parseLong(new String(arr));
+
+        return ans > Integer.MAX_VALUE ? -1 : (int) ans;
+   }
+   private static void reverse(char[] arr , int left , int right) {
+    while(left < right) {
+        char temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        left ++;
+        right --;
     }
+   }
 }
