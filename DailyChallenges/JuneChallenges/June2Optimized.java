@@ -1,4 +1,4 @@
-package DailyChallenges;
+package DailyChallenges.JuneChallenges;
 public class June2Optimized {
     public static void main(String[] args) {
         int[] landStartTime = {2 , 8};

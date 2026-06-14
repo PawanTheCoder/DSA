@@ -1,4 +1,4 @@
-package Hashes;
+package Hashes.BasicTemplate;
 
 import java.util.*;
 

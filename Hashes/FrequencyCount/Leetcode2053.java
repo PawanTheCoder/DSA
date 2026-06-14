@@ -24,7 +24,6 @@ public class Leetcode2053 {
                 }
             }
         }
-
         return "";
     }
 

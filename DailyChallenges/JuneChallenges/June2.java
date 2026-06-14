@@ -1,4 +1,4 @@
-package DailyChallenges;
+package DailyChallenges.JuneChallenges;
 
 
 public class June2 {

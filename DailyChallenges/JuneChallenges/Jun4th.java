@@ -1,4 +1,4 @@
-package DailyChallenges;
+package DailyChallenges.JuneChallenges;
 
 import java.util.ArrayList;
 import java.util.Collections;

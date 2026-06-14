@@ -1,4 +1,4 @@
-package DailyChallenges;
+package DailyChallenges.JuneChallenges;
 // 2144. Minimum Cost of Buying Candies With Discount
 
 import java.util.Arrays;
