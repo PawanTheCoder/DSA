@@ -2,9 +2,6 @@ package Basics;
 
 public class First {
     public static void main(String[] args) {
-        int x = 10;
-        for(int i = 0 ; i <= x ; i++) {
-            System.out.println(x - i);
-        }
+       System.out.println(1 % 2);
     }
 }
