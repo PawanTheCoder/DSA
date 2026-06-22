@@ -14,7 +14,6 @@ public class FindCoordinates {
 
         Queue<int[]> q = new LinkedList<>();
 
-        int target = 3;
         int startRow = 2;
         int startCol = 2;
         q.offer(new int[] {startRow , startCol});
